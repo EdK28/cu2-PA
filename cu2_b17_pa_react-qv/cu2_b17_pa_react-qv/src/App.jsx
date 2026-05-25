@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
   INSTRUCTION:
   - import fetchGames, fetchGenres, fetchPlatforms, fetchYears, and API_URL from the utils/api.js file
 */
-import { useCallback } from "react";
 import { fetchGames, fetchGenres, fetchPlatforms, fetchYears, API_URL } from "./utils/api";
 import "./index.css";
 function App() {
@@ -20,7 +19,6 @@ function App() {
 
  const [ search, setSearch ]      = useState("");
  const [ genre, setGenre ]        = useState("");
- const [ type, setType ]          = useState("");
  const [ platform, setPlatform ]  = useState("");
  const [ year, setYear ]          = useState("");
  const [ sort, setSort ]          = useState("");
@@ -111,7 +109,7 @@ useEffect(() => {
       <div className="card-container">
         {games.length > 0 ? games.map((game) => (
           <div className="card" key={game.title}>
-            <div className="card-image"><img src={`${API_URL}${game.image}`} alt={game.name} /> </div>
+            <div className="card-image"><img src={`${API_URL}${game.image}`} alt={game.title} /> </div>
             <div className="card-category">{game.genre}</div>
             <div className="card-title">{game.title}</div>
             <div className="card-difficulty">{game.platform}</div>
