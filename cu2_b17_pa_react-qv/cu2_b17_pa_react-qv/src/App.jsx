@@ -4,10 +4,8 @@ import React, { useState, useEffect } from "react";
   - import fetchGames, fetchGenres, fetchPlatforms, fetchYears, and API_URL from the utils/api.js file
 */
 import { useCallback } from "react";
-import { fetchGames, fetchGenres, fetchPlatforms, fetchYears } from "./utils/api";
+import { fetchGames, fetchGenres, fetchPlatforms, fetchYears, API_URL } from "./utils/api";
 import "./index.css";
-import { API_URL } from "./utils/api";
-
 function App() {
   /*
   INSTRUCTIONS:

@@ -9,7 +9,7 @@ import axios from "axios";
   - create a function fetchYears that fetches the unique years from the games data
 */
 
-const API_URL = "http://localhost:5123";
+export const API_URL = "http://localhost:5123";
 
 export const fetchGames = async (params = {}) => {
   const response = await axios.get(`${API_URL}/games`, {params});
